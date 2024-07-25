@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const userController_1 = require("../controllers/userController");
+// import { authenticateJWT } from '../middleware/authMiddleware';
+const router = (0, express_1.Router)();
+router.get('/tours', userController_1.getTours);
+router.get('/tours/:id', userController_1.getTourById);
+// router.post('/tours/:id/review', authenticateJWT, addReview);
+exports.default = router;
